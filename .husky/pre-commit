@@ -1,0 +1,2 @@
+echo "执行pre-commit hooks进行代码格式化......"
+pnpm lint:staged

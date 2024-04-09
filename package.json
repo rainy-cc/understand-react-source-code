@@ -1,13 +1,41 @@
 {
-    "name": "mini-react-source-code",
-    "version": "1.0.0",
-    "description": "react源码探索",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
+	"name": "mini-react-source-code",
+	"version": "1.0.0",
+	"description": "react源码探索",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"lint": "eslint \"./{packages, scripts}/**/*.{js,ts,vue,tsx,jsx}\" --fix",
+		"lint:staged": "lint-staged",
+		"prepare": "husky"
+	},
+	"keywords": [
+		"源码梳理",
+		"typescript",
+		"react"
+	],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@eslint/js": "^9.0.0",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"globals": "^15.0.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"typescript": "^5.4.4",
+		"typescript-eslint": "^7.6.0"
+	},
+	"lint-staged": {
+		"packages/**/*.{js,jsx,ts,tsx}": [
+			"eslint --fix",
+			"prettier--write"
+		],
+		"scripts/**/*.{js,jsx,ts,tsx}": [
+			"eslint --fix",
+			"prettier--write"
+		]
+	}
 }
