@@ -4,6 +4,5 @@
 	"useTabs": true,
 	"trailingComma": "all",
 	"insertPragma": false,
-	"tabWidth": 4,
-	"printWidth": 120
+	"tabWidth": 4
 }
